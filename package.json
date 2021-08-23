@@ -1,0 +1,108 @@
+{
+  "name": "datocms-plugin-repeaterfield",
+  "homepage": "https://github.com/m8rzel/datocms-plugin-modular-content",
+  "version": "0.1.1",
+  "description": "With this Plugin you can use your Blocks Models in other Blocks. So it´s a Plugin for nested Content. The Content you can use can be set in Field Settings if you´re my the Field Editor.",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=development webpack-dev-server --port 5000",
+    "dist": "NODE_ENV=production webpack --progress",
+    "addToProject": "yo datocms-plugin:add-to-project",
+    "prepublishOnly": "rimraf lib dist && mkdir dist && npm run dist",
+    "lint": "eslint \"./src/*.{js,jsx}\"",
+    "test": "echo 1"
+  },
+  "keywords": [
+    "datocms",
+    "datocms-plugin",
+    "field-editor",
+    "json-field"
+  ],
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "author": "Marcel Wiskow <m.wiskow96@gmail.com>",
+  "license": "ISC",
+  "datoCmsPlugin": {
+    "title": "Repeater Field",
+    "previewImage": "docs/preview.gif",
+    "coverImage": "docs/cover.png",
+    "entryPoint": "dist/index.html",
+    "pluginType": "field_editor",
+    "fieldTypes": [
+      "json"
+    ],
+    "parameters": {
+      "global": [
+        {
+          "id": "developmentMode",
+          "label": "Development mode",
+          "type": "boolean",
+          "required": true,
+          "default": false,
+          "hint": "Shows debug messages in console"
+        }
+      ],
+      "instance": [
+        {
+          "id": "modular_blocks",
+          "label": "Modular Blocks ID",
+          "hint": "Block IDs you want to be able to add (separated by ',')",
+          "type": "string",
+          "required": true,
+          "default": ""
+        },
+        {
+          "id": "max_rows",
+          "label": "Maximum Rows",
+          "hint": "Enter Maximum No. of rows allowed",
+          "type": "integer",
+          "required": false,
+          "default": "4"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0-beta.54",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^8.0.0-beta",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "generator-datocms-plugin": "^1.0.24",
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "serve": "^10.0.2",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.10",
+    "yo": "^4.2.0"
+  },
+  "dependencies": {
+    "classname": "^0.0.0",
+    "html-webpack-tags-plugin": "^2.0.17",
+    "jodit-react": "^1.1.1",
+    "jquery": "^3.6.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

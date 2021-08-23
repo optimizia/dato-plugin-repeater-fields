@@ -1,0 +1,209 @@
+.container
+  background: white
+  padding-bottom: 24px
+
+.content-container:hover
+  border-color: #848484
+.content-container
+  position: relative
+  border: 1px solid #f0f0f0
+  border-radius: 4px
+  margin: 10px 0
+  height: 40px
+  .content-fields
+    display: none
+
+  .label-key
+    width: 100%
+    height: 30px
+    margin-bottom: 6px
+    &:hover .apiKey
+      display: flex
+  h5
+    width: 100%
+    background: whitesmoke
+    height: 40px
+    align-items: center
+    display: flex
+    padding-left: 40px
+    box-sizing: border-box
+    font-weight: 500
+    font-size: .875rem
+    color: #848484
+    cursor: pointer
+  .input-links
+    width: calc(100% - 30px)
+    height: 40px
+    border: 1px solid #f0f0f0
+    margin: 0 15px 10px 15px
+    box-sizing: border-box
+    overflow: scroll
+    display: flex
+    flex-wrap: wrap
+    li
+      list-style-type: none
+      word-break: keep-all
+      white-space: nowrap
+      border-radius: 3px
+      margin: 5px
+      height: auto
+      box-sizing: border-box
+      background: #cecece
+      width: max-content
+      cursor: pointer
+      padding: 0 0 0 0.7rem
+      justify-content: center
+      align-items: center
+      display: flex
+      color: black
+      overflow: hidden
+      p
+        float: left
+        color: black
+        margin: 0
+        padding-right: 9px
+        &:hover
+          text-decoration: underline
+      svg
+        padding-right: 2px
+        padding-left: 2px
+        height: 100%
+        float: right
+        &:hover
+          background: #ffa8a8
+          path
+            fill: red 
+  select, input
+    display: block
+    box-sizing: border-box
+    width: 100%
+    padding: 10px
+    border: 1px solid #f0f0f0
+    -moz-appearance: none
+    -webkit-appearance: none
+    border-radius: 0
+    background-image: none
+    transition: border 0.2s cubic-bezier(0.55, 0, 0.1, 1)
+    font-size: 15px
+    font-family: "colfax-web","Roboto","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif
+
+  .default-input, .image-upload
+    margin: 0 15px 7px 15px
+    width: calc(100% - 30px)
+
+  input::placeholder, select::placeholder, textarea::placeholder
+    color: #c6c6c6
+  textarea  
+    margin: 0 15px 7px 15px
+    width: calc(100% - 30px)
+    min-width: calc(100% - 30px)
+    max-width: calc(100% - 30px)
+  p
+    margin-top: 10px
+    color: #848484
+  .dots
+    position: absolute
+    top: 13px
+    right: 8px
+    cursor: pointer 
+    path
+      fill: #848484;
+  .label
+    font-size: .875rem
+    margin-left: 15px
+    float: left
+    margin-right: 0 
+    min-width: 30%
+  .apiKey
+    float: right
+    font-size: .75rem
+    margin-right: 15px
+    font-family: Roboto Mono,Menlo,Bitstream Vera Sans Mono,Consolas,Courier,monospace
+    display: none
+  .image-upload
+    position: relative
+    border: 1px solid #f0f0f0
+    height: 181px
+    justify-content: center
+    align-items: center
+    display: flex
+    img
+      height: 86%
+      width: auto
+      object-fit: contain
+    .image-options
+      display:none !important
+      position: absolute
+      width: 100%
+      height: 100%
+      justify-content: center
+      align-items: center
+      background: #0000000f
+      p
+        background: white
+        padding: 17px 30px
+        border-radius: 26px
+        cursor: pointer
+        &:hover
+          color: red
+          background: #f0f0f0
+.arrow
+  width: 17px
+  position: absolute
+  left: 8px
+  top: 12px
+  transform: rotate(-90deg)
+  path
+    fill: #848484;
+.dots-options
+  z-index: 9999
+  display: none
+  width: max-content
+  position: absolute
+  right: 0
+  background: white
+  padding: 20px 10px
+  border: 1px solid #848484
+  border-radius: 3px
+  li
+    padding: 10px
+    cursor: pointer
+.modelContainer
+  position: relative
+.modelChoose
+  z-index: 9999
+  display: none
+  width: max-content
+  position: absolute
+  left: 0
+  bottom: 48px
+  background: white
+  padding: 20px 10px
+  border: 1px solid #848484
+  border-radius: 3px
+  li
+    padding: 3px
+    cursor: pointer
+  li:hover
+    background: #f0f0f0  
+.modelChooseBtn
+  cursor: pointer
+  width: max-content
+  height: 41px
+  background: rgb(248, 243, 250)
+  align-items: center
+  display: flex
+  border-radius: 3px
+  padding: 0 10px
+  svg
+    path
+      fill: rgb(167, 75, 179)
+  p
+    margin-left: 11px
+    margin-right: 5px
+    font-weight: 500
+    color: rgb(167, 75, 179)
+
+.image-upload-selected:hover .image-options
+  display: flex !important
+    
