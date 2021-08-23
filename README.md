@@ -13,7 +13,7 @@ Here you can add the Block IDs you want to be able to use.
 Install the Plugin:
 
 ```
-npm i datocms-plugin-modular-content
+npm i datocms-plugin-repeaterfield
 ```
 
 Install all the project dependencies with:
